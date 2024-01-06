@@ -84,6 +84,21 @@ body {
     position: relative;
     overflow: hidden;
     z-index: 1;
+    transition: all .2s ease-in-out;
+    animation: fadeInCard .45s .2s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInCard {
+    from {
+        transform: scale(.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .screen .row_card .card1 .bg,
@@ -159,6 +174,21 @@ body {
     padding: 20px 24px;
     margin-top: 16px;
     border-bottom: 2px solid rgba(144, 144, 144, 0.40);
+    transition: all .2s ease-in-out;
+    animation: fadeInDetails .45s .2s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInDetails {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .screen .details label {
