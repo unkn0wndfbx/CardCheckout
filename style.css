@@ -108,6 +108,7 @@ body {
     bottom: 0;
     left: 0;
     z-index: 1;
+    width: 100%;
 }
 
 .screen .row_card .card1 .bg,
@@ -214,6 +215,10 @@ body {
     background-color: transparent;
 }
 
+.screen .details input:focus {
+    border-bottom: 2px solid #2b18a5;
+}
+
 .screen .details .row {
     display: flex;
     align-items: center;
@@ -309,6 +314,10 @@ body {
     color: var(--color-white);
 }
 
+.screen .details input:focus {
+    border-bottom: 2px solid #7b6cdd;
+}
+
 .screen.dark .details .row2 p {
     color: rgba(255, 255, 255, 0.5);
 }
@@ -319,4 +328,182 @@ body {
 
 .screen.dark .details.bottom button {
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 800px) {
+    body {
+        flex-direction: column;
+    }
+    .screen {
+        margin-block: 15px;
+    }
+}
+
+/** theme site web */
+.toggle_theme_site {
+    position: fixed;
+    left: 25px;
+    top: 25px;
+    z-index: 999999999;
+}
+
+.toggle_theme_site i {
+    font-size: 18px;
+    color: #cdcdcd;
+}
+
+.toggle_theme_site .checkbox {
+    display: none;
+}
+
+.toggle_theme_site .label {
+    height: 34px;
+    width: 70px;
+    background: transparent;
+    padding-inline: 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transform: scale(1.2);
+    border: 2px solid #4E3EB3;
+}
+
+.toggle_theme_site .label .ball {
+    background: #4E3EB3;
+    border-radius: 50px;
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    transform: translateX(0px);
+    transition: transform 0.4s cubic-bezier(.45, -1.12, .35, 1.78);
+    box-shadow: 2px 1px 1px #4E3EB3;
+}
+
+.toggle_theme_site .checkbox:checked + .label .ball {
+    transform: translateX(31px);
+}
+
+/* laptop screen */
+.screen.laptop {
+    width: 45vw;
+    min-height: 55vh;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.screen.laptop .column3 {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: start;    
+    min-height: 55vh;
+    width: 55%;
+}
+
+.screen.laptop .row_card {
+    margin: 0;
+    margin-top: 10vh;
+}
+
+.screen.laptop .row_card .card1 {
+    width: 30px;
+    height: 156px;
+    border-radius: 0 10px 10px 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.screen.laptop .row_card .card2 {
+    width: 30px;
+    height: 156px;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.screen.laptop .row_card .card {
+    width: 323px;
+    height: 202px;
+    margin-inline: auto;
+    padding: 15px 25px;
+}
+
+.screen.laptop .row_card .card .row {
+    margin-top: 25px;
+    margin-bottom: 27px;
+}
+
+.screen.laptop .column2 {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    justify-content: end;
+    min-height: 55vh;
+    width: 45%;
+}
+
+.screen.laptop .details {
+    height: 47vh;
+    border-radius: 40px 0 0 0;
+    flex-direction: column;
+    padding: 35px 35px;
+    margin-top: 0;
+}
+
+.screen.laptop .details.bottom {
+    height: auto;
+    flex-direction: row;
+    border-radius: 0 0 0 40px;
+    padding: 35px 35px;
+    margin-top: 0;
+    border: none;
+    box-shadow: 0px 0px 8px 0px rgba(121, 89, 206, 0.10);
+}
+
+.screen.laptop .details label {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: auto;
+}
+
+.screen.laptop .details label:nth-child(1) {
+    margin-top: 0;
+}
+
+.screen.laptop .details .row {
+    margin-top: auto;
+}
+
+.screen.laptop .details .row2 {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-block: auto 0;
+}
+
+.screen.laptop .details .row2 input {
+    width: auto;
+    height: auto;
+    margin: 0;
+    margin-right: 5px;
+}
+
+.screen.laptop .details .row2 p {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.screen.laptop .details input {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 0;
 }
